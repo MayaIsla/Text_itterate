@@ -29,7 +29,7 @@ def summarize_text_with_openai(text, chunk_len=2000, temperature=0.2):
                 try:
                     strJ = str(j)
                     response = openai.ChatCompletion.create(
-                    model="gpt-4",
+                    model="mistralai/Mistral-7B-Instruct-v0.1",
                     messages=[
                         {"role": "system", "content": "You are a summarization assistant."},
                         {"role": "user", "content": f' + {strJ} + "\n" + {chunk}'}
